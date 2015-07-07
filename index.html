@@ -61,12 +61,7 @@
         return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
     }
 };
-        if( isMobile.iOS() ) alert('iOS');
-        if( isMobile.any() ) alert('mobile');
-        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-            document.getElementsByTagName("body")[0].setAttribute("style","font-size:50px;");
-            
-        }
+        if( isMobile.iOS() || isMobile.any()){document.getElementsByTagName("body")[0].setAttribute("style","font-size:50px;");};
         </script>
     </head>
     <body>
