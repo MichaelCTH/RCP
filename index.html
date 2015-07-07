@@ -37,7 +37,12 @@
             @media screen and (min-width: 993px) {
             #mobile_nav{display:none;}
             }
-            
+            @media screen and (max-device-width : 993px) {
+                #test12{font-size:35px;}
+                h3{font-size:45px;}
+                h6{font-size:40px;}
+                #mobile_nav{font-size:21px;}
+            }
         </style>
     </head>
     <body>
@@ -732,10 +737,6 @@ adequately.</p>
         </div>
     </body>
     <script>
-         if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
-
-         {
-             document.getElementById("test12").setAttribute("style","font-size:35px;");
-         }
+         
     </script>
 </html>
