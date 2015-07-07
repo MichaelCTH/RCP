@@ -37,9 +37,13 @@
             @media screen and (min-width: 993px) {
             #mobile_nav{display:none;}
             }
-            @media screen and (max-width: 993px){
-            }
+            
         </style>
+        <script>
+        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+            document.getElementById("main-info").style.fontSize = "25px";
+        }
+        </script>
     </head>
     <body>
         <!-------------------------------Nav-Bar------------------------------------>
@@ -79,7 +83,7 @@
         <!------------------------------------------------------------------->
         <!------------------------------------------------------------------->
         <div class="row">
-            <div class="col s12 m12 l9" style="left:20px;right:20px">
+            <div class="col s12 m12 l9" style="left:20px;right:20px" id="main-info">
                 <div id="COVER" class="section scrollspy">
                     <img class="card-panel" src="image/cover.jpg" style="width:100%">
                 </div>
