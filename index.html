@@ -14,7 +14,7 @@
         <script>
             $(document).ready(function(){$('.scrollspy').scrollSpy();});
             $(document).ready(function(){$('.button-collapse').sideNav({
-                menuWidth: 300, // Default is 240
+                menuWidth: 450, // Default is 240
                 edge: 'right', // Choose the horizontal origin
                 closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
             });});
@@ -38,21 +38,26 @@
             @media screen and (min-width: 993px) {
             #mobile_nav{display:none;}
             }
-            @media screen and (max-device-width : 993px) {
+            @media screen and (max-device-width : 993px) { /*Mobile View Reset*/
                 #test12{font-size:35px;}
                 h3{font-size:45px;}
                 h5{font-size:42px;}
                 h6{font-size:39px;}
-                #mobile_nav{font-size:21px;}
+                #mobile_nav{font-size:27px;}
+                .side-nav li a{width:100%;height:100%; font-size:100%;line-height: 180%}
+                .side-nav li {height:50px;}
+                #title {height:90px;}
+                #title a{height:90px;}
+                #title i{font-size:70px;line-height: 120%}
             }
         </style>
     </head>
     <body>
         <!-------------------------------Nav-Bar------------------------------------>
         <div class="navbar-fixed">  
-        <nav class="teal lighten-2">
+        <nav id="title" class="teal lighten-2">
             <div class="nav-wrapper">
-            <a href="#!" class="brand-logo"><h3>Title/Logo</h3></a>
+            <a href="#!" class="brand-logo"><h2>Title/Logo</h2></a>
             <a href="#" data-activates="slide-out" class="right button-collapse" style="right:20px"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
             </ul>
@@ -61,7 +66,7 @@
         </div>
         <!----------------------------Mobile Side Nav-Bar --------------------------------------->
         <div id="mobile_nav">
-            <ul id="slide-out" class="side-nav section table-of-contents" style="overflow: auto;">
+            <ul id="slide-out" class="side-nav section table-of-contents" style="overflow: auto;padding-top:50px">
                 <li><a href="#COVER">TOP</a></li>
                 <li><a href="#INTRODUCTION">INTRODUCTION</a></li>
                 <li><a href="#JOINTBLEEDS">JOINT BLEEDS</a></li>
