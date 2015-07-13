@@ -12,6 +12,8 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         
         <script>
+            //Setting for plugin functions
+            $(document).ready(function(){$('.materialboxed').materialbox();});
             $(document).ready(function(){$('.scrollspy').scrollSpy();});
             $(document).ready(function(){$('.button-collapse').sideNav({
                 menuWidth: 450, // Default is 240
@@ -27,6 +29,7 @@
                 belowOrigin: true // Displays dropdown below the button
             });});
         </script>
+        
         <style>
             h6{font-size:20px;}
             body{font-family: Arial, Helvetica, sans-serif;}
@@ -36,10 +39,14 @@
             #mobile_nav a{left:90%;top:90%;}
             .side-nav li a{width:100%;height:100%; font-size:100%;line-height: 250%}
             .side-nav li {height:35px;}
+            #logo{padding-left:20px;}
+            /*For large screen*/
             @media screen and (min-width: 993px) {
             #mobile_nav{display:none;}
             }
-            @media screen and (max-device-width : 993px) { /*Mobile View Reset*/
+            
+            /*Any Mobile Devices*/
+            @media screen and (max-device-width : 993px) { 
                 #test12{font-size:35px;}
                 h3{font-size:45px;}
                 h5{font-size:42px;}
@@ -48,23 +55,33 @@
                 .side-nav li a{width:100%;height:100%; font-size:100%;line-height: 180%}
                 .side-nav li {height:50px;}
                 #title {height:90px;}
-                #title a{height:90px;}
-                @media screen and (max-device-width : 414px){
-                    #title a{font-size:50px;line-height: 180%}
-                }
+                #logo{height:90px;}
                 .TTiny{font-size:25px;color:#00b8d4;line-height: 190%}
                 #title i{font-size:70px;line-height: 120%}
-                 
+                
+                /*Vetical Mobile Devices*/
+                @media screen and (max-device-width : 414px){
+                    #logo{font-size:50px;line-height: 180%}
+                }    
             }
         </style>
     </head>
     <body>
-        <!-------------------------------Nav-Bar------------------------------------>
+        <!------------------------------- Top FixedNav-Bar------------------------------------>
+        
+        <ul id="dropdown1" class="dropdown-content">
+                <li><a href="#!">English</a></li>
+                <li><a href="#!">French</a></li>
+        </ul>
+        
         <div class="navbar-fixed">  
         <nav id="title" class="teal lighten-2">
             <div class="nav-wrapper">
-            <a href="#!" class="brand-logo">Title/Logo</a>
-            <a href="#" data-activates="slide-out" class="right button-collapse" style="right:20px"><i class="material-icons">menu</i></a>
+                <a id="logo" href="#!" class="brand-logo"><strong>HIRT</strong></a>
+                <ul class="right hide-on-med-and-down"> 
+                    <li><a id="lang" class="dropdown-button" href="#!" data-activates="dropdown1">Language<i class="material-icons right">arrow_drop_down</i></a></li>
+                </ul>
+                <a href="#" data-activates="slide-out" class="right button-collapse" style="right:20px"><i class="material-icons">menu</i></a>
             </div>
         </nav>
         </div>
@@ -96,7 +113,7 @@
         <div id="test12" class="row">
             <div class="col s12 m12 l9" style="left:20px;right:20px">
                 <div id="COVER" class="section scrollspy">
-                    <img class="card-panel" src="image/cover.jpg" style="width:100%">
+                    <img class="card-panel responsive-img" src="image/cover.jpg">
                 </div>
                 <div id="INTRODUCTION" class="section scrollspy card-panel">
                     <h3 style="color:#00b8d4">INTRODUCTION</h3>
@@ -191,7 +208,7 @@ Your HTC/physiotherapist will advise you what type of immobilization should be u
                     <li><i class="TTiny material-icons">stop</i>&nbspWalking on the toes, unable to place heel on ground;</li>
                     <li><i class="TTiny material-icons">stop</i>&nbspWalking with the foot turned out.</li>
                 </ul>
-                <img class="responsive-img" src="./image/1.png" style="float:right"> 
+                <img class="responsive-img materialboxed " src="./image/1.png" style="float:right"> 
                 <ul style="margin-top:-3%">
                     <li style="padding-top:3%">What you may feel:</li>
                     <li><i class="TTiny material-icons">stop</i>&nbspWarmth at the front of the ankle joint.</li>
@@ -220,7 +237,7 @@ Your HTC/physiotherapist will advise you what type of immobilization should be u
                     <li><i class="TTiny material-icons">stop</i>&nbspA limp, walking with the knee bent;</li>
                     <li><i class="TTiny material-icons">stop</i>&nbspUnable to straighten and/or bend the knee completely.</li> 
                 </ul>
-                <img class="responsive-img" src="./image/2.png" style="float:right;padding-left:2%">
+                <img class="responsive-img materialboxed " src="./image/2.png" style="float:right;padding-left:2%">
                 <ul>
                             <li>What you may feel:</li>
                             <li><i class="TTiny material-icons">stop</i>&nbspWarmth at the front of the knee and along the sides of the kneecap;</li> 
@@ -229,7 +246,7 @@ Your HTC/physiotherapist will advise you what type of immobilization should be u
                             <li><i class="TTiny material-icons">stop</i>&nbspSwelling. Can you see the hollows on either side of the knee cap? Do they look the same as the other knee?</li> 
                             <li><i class="TTiny material-icons">stop</i>&nbspCan the knee straighten out all the way without forcing?</li>
                 </ul>
-                <img class="responsive-img" src="./image/3.png" style="float:left;padding-right:2%">
+                <img class="responsive-img materialboxed " src="./image/3.png" style="float:left;padding-right:2%">
                 <ul>   
                     <li><i class="TTiny material-icons">stop</i>&nbspCan the knee bend all the way without forcing?</li>
                     <li style="padding-top:3%">What you should do:</li>
@@ -259,7 +276,7 @@ Your HTC/physiotherapist will advise you what type of immobilization should be u
                     <li><i class="TTiny material-icons">stop</i>&nbspCan the arm straighten out <b>all the way?</b> (Note: many children can straighten the elbow PAST a straight line. Be sure to compare to the other arm.);</li>
                     <li><i class="TTiny material-icons">stop</i>&nbspCan the elbow straighten completely when the palm is turned up?</li>
                     </ul>
-                    <img class="responsive-img" src="./image/4.png" style="float:right;padding-left:2%">
+                    <img class="responsive-img materialboxed " src="./image/4.png" style="float:right;padding-left:2%">
                     <ul>
                     <li style="margin-left:5%">- The elbow is composed of
 two joints: one that bends and straightens like a hinge and one that allows the forearm to pivot. For small or very early bleeds, each of these movements may appear full if tested alone, but will show loss of motion if both movements are tested together. Your physiotherapist can help you learn what to look for.</li>  
@@ -278,7 +295,7 @@ two joints: one that bends and straightens like a hinge and one that allows the 
 
                 <div id="Shoulder" class="section scrollspy card-panel">
                     <h5 style="color:#00b8d4">SHOULDER</h5>
-                    <img class="responsive-img" src="./image/5.png" style="float:left;padding-right:2%">
+                    <img class="responsive-img materialboxed " src="./image/5.png" style="float:left;padding-right:2%">
                     <ul>
                     <li>What you may see:</li>
                     <li><i class="TTiny material-icons">stop</i>&nbspHolding the arm close to the body;</li>
@@ -291,7 +308,7 @@ two joints: one that bends and straightens like a hinge and one that allows the 
                     <li><i class="TTiny material-icons">stop</i>&nbspCan you reach your hand behind your head easily and without pain?</li>
                     </ul>
                     
-                    <img class="responsive-img" src="./image/6.png" style="float:right;padding-left:2%">
+                    <img class="responsive-img materialboxed " src="./image/6.png" style="float:right;padding-left:2%">
                     <ul>
                     <li style="padding-top:3%">What you should do:</li>
                     <li><i class="TTiny material-icons">stop</i>&nbspFollow the treatment plan from your HTC:</li>
@@ -333,7 +350,7 @@ two joints: one that bends and straightens like a hinge and one that allows the 
                 <div id="Toes" class="section scrollspy card-panel">
                     <h5 style="color:#00b8d4">TOE JOINTS</h5>
                     <p>Bleeds into the small joints of the toes are not common. They can sometimes occur in children who play in a squatting position or while sitting on their heels.</p>
-                    <img class="responsive-img" src="./image/7.png" style="float:right;padding-left:2%">
+                    <img class="responsive-img materialboxed " src="./image/7.png" style="float:right;padding-left:2%">
                     <p>In older children, teens and adults, toe bleeds are more likely to be the result of banging the foot on an object (stubbing the toe). If there is a known trauma, it is important to make sure there are no broken bones. If there is NO known trauma, contact the HTC to rule out other medical conditions.</p>
                     <ul>
                     <li>What you may see:</li>
@@ -371,9 +388,9 @@ two joints: one that bends and straightens like a hinge and one that allows the 
                     </ul>
                     </div>
                     <h5 style="color:#00b8d4;padding-top:3%"><b>MUSCLE BLEEDS ARE DIFFERENT FROM JOINT BLEEDS BECAUSE...</b></h5>
-                    <img class="responsive-img" src="./image/8.png" style="float:left;padding-right:2%">
+                    <img class="responsive-img materialboxed " src="./image/8.png" style="float:left;padding-right:2%">
                     <p>Muscle bleeds are less common than joint bleeds. As a result, many people don't have the same understanding about bleeding into muscles: "oh, it's only a pulled muscle". <b>In fact, muscle bleeds can be more serious than joint bleeds because of their complications.</b></p>
-                    <img class="responsive-img" src="./image/9.png" style="float:right;padding-left:2%">
+                    <img class="responsive-img materialboxed " src="./image/9.png" style="float:right;padding-left:2%">
                     <p>In some large muscles, outside swelling is not always obvious at first, because the blood is not contained to a single area and can seep slowly through different layers of the muscle.
 </p>
                     <p>Many of the deeper muscles are wrapped with a tough tissue called fascia, forming compartments. Nerves and blood vessels are also contained
@@ -416,10 +433,10 @@ FOR ALL MUSCLE BLEEDS</b></h5>
                 </div>
                 
                 <div id="Psoas" class="section scrollspy card-panel">
-                    <img class="responsive-img" src="./image/10.png" style="float:left;padding-right:2%">
+                    <img class="responsive-img materialboxed " src="./image/10.png" style="float:left;padding-right:2%">
                     <h5 style="color:#00b8d4">PSOAS MUSCLE (or Iliopsoas, pronounced with a silent P)</h5>
                     <p>The psoas muscle is located at the front of the hip joint, deep in the pelvis. It can be injured by a sudden stretch (e.g. stumbling or slipping on ice) or by repetitive use (e.g. sports, sexual activity).</p>
-                    <img class="responsive-img" src="./image/11.jpg" style="float:right;padding-left:2%">
+                    <img class="responsive-img materialboxed " src="./image/11.jpg" style="float:right;padding-left:2%">
                     <ul>
                         <li>What you may see</li>
                         <li><i class="TTiny material-icons">stop</i>&nbspLimping;</li>
@@ -432,13 +449,13 @@ FOR ALL MUSCLE BLEEDS</b></h5>
                         <li><i class="TTiny material-icons">stop</i>&nbspDiscomfort in the groin area OR the back OR down the front of the thigh;</li>
                         <li><i class="TTiny material-icons">stop</i>&nbspDifficulty lying flat on your back.</li>
                         </ul>
-                        <img class="responsive-img" src="./image/12_1.jpg" style="float:right;padding-left:2%">
+                        <img class="responsive-img materialboxed " src="./image/12_1.jpg" style="float:right;padding-left:2%">
                         <ul>
                         <li style="padding-top:3%">What you can do to assess:</li>
                         <li><i class="TTiny material-icons">stop</i>&nbspLie on your back. Start with the hip and knee bent;</li>
                         <li><i class="TTiny material-icons">stop</i>&nbspGently straighten your leg. <b>Stop if your back starts to arch or if this increases the pain in your groin, thigh, or back.</b></li>
                         </ul>
-                        <img class="responsive-img" src="./image/12_2.png" style="float:left;padding-right:2%">
+                        <img class="responsive-img materialboxed " src="./image/12_2.png" style="float:left;padding-right:2%">
                          <ul>
                         <li style="padding-top:3%">What you MUST do:</li>
                         <li><i class="TTiny material-icons">stop</i>&nbsp<b>Call the HTC immediately for instructions;</b></li>
@@ -466,7 +483,7 @@ FOR ALL MUSCLE BLEEDS</b></h5>
                 <div id="Forearm" class="section scrollspy card-panel">
                     <h5 style="color:#00b8d4">FOREARM MUSCLES</h5>
                     <p>Groups of muscles are located on the front and the back of the forearm. These muscles move the wrist and the fingers. The muscles on the front of the forearm can be injured by sustained gripping (e.g. biking, playing guitar). The muscles on the back of the arm are often injured by repeated use (e.g. hammering or tennis). Both groups can also be injured by a direct blow such as getting hit by a baseball.</p>
-                    <img class="responsive-img" src="./image/13-4.png" style="float:right;padding-left:2%">
+                    <img class="responsive-img materialboxed " src="./image/13-4.png" style="float:right;padding-left:2%">
                     <ul>
                         <li>What you may see</li>
                         <li><i class="TTiny material-icons">stop</i>&nbspDifficulty using the arm;</li>
@@ -485,7 +502,7 @@ FOR ALL MUSCLE BLEEDS</b></h5>
                         
                         <div class="row">
                             <div class="col s12 m5">
-                        <img class="responsive-img" src="./image/15.png" style="float:left;padding-right:2%;padding-bottom:2%">
+                        <img class="responsive-img materialboxed " src="./image/15.png" style="float:left;padding-right:2%;padding-bottom:2%">
                             </div>
                             <div class="col s12 m7">
                         <div class="row" style="width:100%;padding-left:5%">
@@ -496,7 +513,7 @@ FOR ALL MUSCLE BLEEDS</b></h5>
                         </ul>
                             </div>
                             <div class="col s12">
-                        <img class="responsive-img" src="./image/16.7.png">
+                        <img class="responsive-img materialboxed " src="./image/16.7.png">
                             </div>
                                 </div>
                         </div>
@@ -518,7 +535,7 @@ FOR ALL MUSCLE BLEEDS</b></h5>
                 
                 <div id="Calf" class="section scrollspy card-panel">
                     <h5 style="color:#00b8d4">THE CALF</h5>
-                    <img class="responsive-img" src="./image/18.png"style="float:right;padding-left:2%">
+                    <img class="responsive-img materialboxed " src="./image/18.png"style="float:right;padding-left:2%">
                     <p>The calf contains a number of muscles. The calf muscles can be injured by a direct blow (e.g. kick), or from overuse during sports or work. The most frequently injured is the one closest to the surface, called the "gastrocnemius" or "gastroc"; it runs from the heel to just above the knee. The next layer of the calf muscle is called soleus. It stops below the knee. Deeper still are the muscles that bend the toes.</p>
                     <ul>
                         <li>What you may see</li>
@@ -527,7 +544,7 @@ FOR ALL MUSCLE BLEEDS</b></h5>
                         <li><i class="TTiny material-icons">stop</i>&nbspUnable to walk with the heel flat on the floor.</li>
                     </ul>
                     
-                        <img class="responsive-img" src="./image/19.png" style="float:left;padding-right:2%">
+                        <img class="responsive-img materialboxed " src="./image/19.png" style="float:left;padding-right:2%">
                     
                          <ul>
                         <li>What you may feel:</li>
@@ -542,7 +559,7 @@ your ankle up and down;</li>
                             other side. In the early stages of a gastroc bleed, ankle movements may be the same in both legs when the knee is in a <b>bent position.</b> However, if the knee is <b>straight</b> there will be more tension on the muscle; ankle movement may be limited and the calf will be painful when stretched.
 <br>To confirm the location of the bleed, you will need to test each muscle separately.</li>
                     </ul>
-                    <img class="responsive-img" src="./image/20.png" style="float:right;padding-top:8%;padding-left:2%">
+                    <img class="responsive-img materialboxed " src="./image/20.png" style="float:right;padding-top:8%;padding-left:2%">
                         <ul style="padding-top:8%">
                         <li style="color:#00b8d4"><b>TEST 1</b></li>
                         <li>Sit with knees bent. Try to get both heels flat on the floor. Keeping the heel on the floor, bend the knee and slide the foot back. Compare the movement and the tightness in the calf muscle to other leg. If there is discomfort and the movement is limited, the bleed could be in either the gastroc or the soleus.</li>
@@ -551,7 +568,7 @@ your ankle up and down;</li>
                         <li>Stand up. Place the heel flat on the floor. Gently straighten knee. If this causes pain in the calf, the bleed is most likely in the gastroc.</li>
                     </ul>
                          
-                    <img class="responsive-img" src="./image/21.png" style="float:left;padding-right:2%">
+                    <img class="responsive-img materialboxed " src="./image/21.png" style="float:left;padding-right:2%">
  
                     <ul>
                         <li style="padding-top:3%;color:#00b8d4"><b>TEST 3</b></li>
@@ -565,7 +582,7 @@ your ankle up and down;</li>
                         <li style="margin-left:5%">- Avoid walking, except with crutches or a walker until you can place the heel down easily, without strain;</li>
                         <li style="margin-left:5%">- Continue to use crutches until you can walk correctly. You should be able to put your heel down first and put your foot flat, and then push off from your toes.</li>
                     </ul>
-                    <img class="responsive-img" src="./image/22.png" style="float:right;padding-left:2%">
+                    <img class="responsive-img materialboxed " src="./image/22.png" style="float:right;padding-left:2%">
                     
                     <ul>
                         <li style="padding-top:3%">What you should watch for:</li>
@@ -581,7 +598,7 @@ your ankle up and down;</li>
                 <div id="Hamstrings" class="section scrollspy card-panel">
                     <h5 style="color:#00b8d4">HAMSTRINGS</h5>
                     <p>The hamstring muscles are located along the back of the thigh. Their job is to extend the hip and to bend the knee. They can be injured by a sudden stretch or by overuse. When teenagers go through a growth spurt, these muscles may not be able to stretch enough to keep up with the rapid growth of the bones. This makes them more likely to be injured, especially during sports. Hamstrings can also become tight after knee bleeds because they tighten up to protect the knee.</p>
-                    <img class="responsive-img" src="./image/23.png" style="float:right;padding-left:2%">
+                    <img class="responsive-img materialboxed " src="./image/23.png" style="float:right;padding-left:2%">
                         <ul>
                         <li>What you may see</li>
                         <li><i class="TTiny material-icons">stop</i>&nbspLimping, with knee held a bit bent, and shorter steps on the sore side.</li>
@@ -592,7 +609,7 @@ your ankle up and down;</li>
                         <li style="padding-top:3%;color:#00b8d4"><b>TEST 1</b></li>
                         <li>Standing: can the knee go completely straight without discomfort at the back of the thigh? If no, begin your treatment plan. If yes, proceed to test 2.</li>
                     </ul>
-                    <img class="responsive-img" src="./image/24.png" style="float:right;margin-top:5%;padding-left:2%">
+                    <img class="responsive-img materialboxed " src="./image/24.png" style="float:right;margin-top:5%;padding-left:2%">
                     <ul style="margin-top:5%">
                         <li style="padding-top:3%;color:#00b8d4"><b>TEST 2</b></li>
                         <li>Sit on a chair, with your back straight. Slowly and gently straighten the knee, until a pulling sensation is felt in the back of the thigh. Compare the amount of movement and discomfort to the other leg.</li>
@@ -612,7 +629,7 @@ your ankle up and down;</li>
                 
                 <div id="Quadriceps" class="section scrollspy card-panel">
                     <h5 style="color:#00b8d4">QUADRICEPS</h5>
-                    <p>The quadriceps muscle (quads) is a group of four muscles located on the front of the thigh. Their main job is to extend the knee; the most superficial of these muscles also helps to bend the hip. The quads can be injured by a sudden forceful stretch, such as during sprinting without warming up first. More frequently, they are injured by a direct blow- e.g. contact with a baseball, or another player’s knee.</p>
+                    <p>The quadriceps muscle (quads) is a group of four muscles located on the front of the thigh. Their main job is to extend the knee; the most superficial of these muscles also helps to bend the hip. The quads can be injured by a sudden forceful stretch, such as during sprinting without warming up first. More frequently, they are injured by a direct blow- e.g. contact with a baseball, or another player's knee.</p>
                     <ul>
                         <li>What you may see</li>
                         <li><i class="TTiny material-icons">stop</i>&nbspLimping, with shorter steps on that side;</li>
@@ -620,7 +637,7 @@ your ankle up and down;</li>
                         <li style="padding-top:3%">What you may feel:</li>
                         <li><i class="TTiny material-icons">stop</i>&nbspTenderness and possibly warmth in the heart of the muscle.</li>
                      </ul> 
-                    <img class="responsive-img" src="./image/25.png" style="float:right;padding-left:2%">
+                    <img class="responsive-img materialboxed " src="./image/25.png" style="float:right;padding-left:2%">
                         <ul>
                         <li>What you can do to assess:</li>
                         <li style="padding-top:3%;color:#00b8d4"><b>TEST 1</b></li>
@@ -630,7 +647,7 @@ your ankle up and down;</li>
 your bed. Bend your opposite knee up to keep your back flat. Gently, let the sore leg bend over the edge of the bed. If there is a bleed into the quads, the hip may bend up, and the pain in the thigh will increase as the knee is bent.</li>
                     </ul> 
                     
-                        <img class="responsive-img" src="./image/26.png" style="float:left;padding-right:2%">
+                        <img class="responsive-img materialboxed " src="./image/26.png" style="float:left;padding-right:2%">
                         <ul>
                         <li>What you should do:</li>
                         <li><i class="TTiny material-icons">stop</i>&nbspFollow the treatment plan from the HTC:</li>
@@ -657,7 +674,7 @@ These large fleshy muscles can be injured by falling backwards and landing direc
                         <li><i class="TTiny material-icons">stop</i>&nbspDifficulty bending the hip;</li>
                         <li><i class="TTiny material-icons">stop</i>&nbspA mild limp, with shorter steps on that side.</li>
                         </ul>
-                        <img class="responsive-img" src="./image/27.png" style="float:right;padding-left:2%">   
+                        <img class="responsive-img materialboxed " src="./image/27.png" style="float:right;padding-left:2%">   
                         <ul>
                         <li style="padding-top:3%">What you will feel:</li>
                         <li><i class="TTiny material-icons">stop</i>&nbspTenderness and a lump in the heart of the muscle.</li>
@@ -699,14 +716,14 @@ adequately.</p>
                     <p><b>Synovitis</b> is irritation and inflammation of the <b>lining</b> of the joint. This is a normal part of the healing process after a joint bleed. However, with repeated bleeds into the same area, the swelling continues and becomes chronic. This is referred to as a target joint. The joint bleeds easily and often.</p>
                     <p><b>Arthropathy</b> means "degeneration of a joint". The joint surfaces are worn and the joint can be stiff and painful.</p>
                     <p>This table will help identify the cause of joint pain and swelling.</p>
-                    <img class="card-panel" src="image/table.jpg" style="width:100%">
+                    <img class="card-panel responsive-img" src="image/table.jpg">
                     <p>If chronic synovitis develops, a new treatment plan must be discussed with the bleeding disorder treatment team. Regular factor, a splint or brace for activities, and an exercise program are all things that should help synovitis get better. Sometimes surgery is necessary.</p>
                     <p>If arthropathy develops, a new plan must be discussed with the team. Treatment may include regular physiotherapy, medication, splints or braces, activity modification and sometimes surgery.</p>
                     <br><br>
                     <div class="card-panel cyan lighten-4">It is important that you know your factor level and your usual treatment when you present yourself for treatment. To help you with this, your HTC will give you a FactorFirst card to carry with you at all times.</div>
                 </div>
                 <div id="BACK" class="section scrollspy">
-                    <img class="card-panel" src="image/backcover.jpg" style="width:100%">
+                    <img class="card-panel materialboxed responsive-img" src="image/backcover.jpg">
                 </div>
             </div>
             <!--Side Nar-->
