@@ -39,7 +39,7 @@
             #side_col li{list-style-type:none;}
             h6{font-size:20px;}
             body{font-family: Arial, Helvetica, sans-serif;text-align:justify;}
-            
+            #choice {font-size:25px;}
             .TTiny{font-size:10px;color:#00b8d4;padding-left:2%}
             .MMedium{font-size:40px;color:pink;}
             #mobile_nav a{left:90%;top:90%;}
@@ -66,6 +66,7 @@
                 #logo{height:90px;}
                 .TTiny{font-size:25px;color:#00b8d4;line-height: 190%}
                 #title i{font-size:70px;line-height: 120%}
+                #choice {font-size:70px;}
                 
                 /*Vetical Mobile Devices*/
                 @media screen and (max-device-width : 414px){
@@ -76,16 +77,16 @@
     </head>
     <body>
         <!--- Language choose for Mobile-->
-        <div style="position:fixed;bottom:-10px;right:1px;"><a class="waves-effect waves-light btn modal-trigger" href="#modal1">Language</a></div>
+        <div style="position:fixed;bottom:-10px;right:1px;"><a class="waves-effect waves-light btn-large modal-trigger" href="#modal1">Language</a></div>
           <div id="modal1" class="modal" style="max-width:350px;">
             <div class="modal-content">
-              <h5>Language Choices:</h5>
+              <p id="choice">Language Choices:</p>
               <div class="row" style="padding-top:10px;margin-left:5%">
                 <div class="col s6">
-              <a class="modal-action modal-close waves-effect waves-light btn" href="#!">English</a>
+              <a class="modal-action modal-close waves-effect waves-light btn-large" href="#!">English</a>
           </div>
           <div class="col s6">
-              <a class="waves-effect waves-light btn" href="./index_Fr.html">French</a>
+              <a class="waves-effect waves-light btn-large" href="./index_Fr.html">French</a>
           </div>
             </div>
         </div>
