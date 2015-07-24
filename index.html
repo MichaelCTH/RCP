@@ -51,6 +51,7 @@
             @media screen and (min-width: 993px) {
             #mobile_nav{display:none;}
             #test12{max-width:1080px;}
+            #langbtn{display:none;}
             }
             
             /*Any Mobile Devices*/
@@ -68,7 +69,7 @@
                 #title i{font-size:70px;line-height: 120%}
                 #choice {font-size:35px;}
                 #modal1 a{font-size:30px;}
-                #langbtn {font-size:30px;}
+                #langbtn a{font-size:30px;}
                 /*Vetical Mobile Devices*/
                 @media screen and (max-device-width : 414px){
                     #logo{font-size:50px;line-height: 180%}
@@ -79,11 +80,11 @@
     <body>
         <!--- Language choose for Mobile-->
 
-        <div style="position:fixed;bottom:-5px;right:5px;"><a id="langbtn" class="waves-effect waves-light btn-large modal-trigger" href="#modal1">Language</a></div>
+        <div id="langbtn" style="position:fixed;bottom:-5px;right:5px;"><a  class="waves-effect waves-light btn-large modal-trigger" href="#modal1">Language</a></div>
           <div id="modal1" class="modal" style="max-width:60%;">
             <div class="modal-content">
               <p id="choice">Language Choices:</p>
-              <div class="row" style="padding-top:10px;margin-left:5%">
+              <div class="row" style="padding-top:10px;margin-left:8%">
                 <div class="col s12 m6">
               <a class="modal-action modal-close waves-effect waves-light btn-large" href="#!">English</a>
           </div>
