@@ -49,7 +49,6 @@
             @media screen and (min-width: 993px) {
             #mobile_nav{display:none;}
             #test12{max-width:1080px;}
-            }
             
             /*Any Mobile Devices*/
             @media screen and (max-device-width : 993px) { 
@@ -74,7 +73,6 @@
     </head>
     <body>
         <!--- Top Fixed Nav-Bar-->
-        
         <ul id="dropdown1" class="dropdown-content">
                 <li style="list-style-type:none;"><a href="#!">English</a></li>
                 <li style="list-style-type:none;"><a href="./index_Fr.html">French</a></li>
@@ -84,13 +82,15 @@
         <nav id="title" class="teal lighten-2">
             <div class="nav-wrapper">
                 <a id="logo" href="#!" class="brand-logo"><strong>HIRT?</strong></a>
-                <ul class="right hide-on-med-and-down"> 
+                <ul class="right hide-on-med-and-down">
                     <li style="list-style-type:none;"><a id="lang" class="dropdown-button" href="#!" data-activates="dropdown1">Language<i class="material-icons right">arrow_drop_down</i></a></li>
                 </ul>
                 <a href="#" data-activates="slide-out" class="right button-collapse" style="right:20px"><i class="material-icons">menu</i></a>
+                <a href="#" data-activates="dropdown1" class="right button-collapse dropdown-button">Language<i class="material-icons right">arrow_drop_down</i></a>
             </div>
         </nav>
         </div>
+
         <!--Mobile Side Nav-Bar-->
         <div id="mobile_nav">
             <ul id="slide-out" class="side-nav section table-of-contents" style="overflow: auto;padding-top:30x;">
@@ -115,6 +115,7 @@
                 <li><a href="#TARGETJOINTS">Target Joints, Arthropathy & Synovitis</a></li>
             </ul>
         </div>
+
         <!--Main Content-->
         <!---->
         <div id="test12" class="row">
